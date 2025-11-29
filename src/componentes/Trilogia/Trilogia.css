@@ -118,3 +118,64 @@
 .sticky-content[style*="#FFC72C"] .panel-content {
     color: #000000; 
 }
+
+@media (max-width: 768px) {
+    
+    .trilogia-sticky-wrapper {
+        position: relative;
+        display: block;
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .sticky-content-wrap {
+        flex: none;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .image-stack-wrap {
+        flex: none;
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        z-index: 9;
+    }
+    
+    .sticky-content {
+        height: auto; 
+        padding: 30px 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .sticky-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .panel-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .panel-content {
+        font-size: 1rem;
+    }
+    
+    .scroll-trigger-area {
+        height: auto;
+    }
+
+    .scroll-trigger-panel {
+        height: 30vh;
+    }
+    
+    .scroll-trigger-panel:last-child {
+        height: 30vh;
+    }
+    
+}
