@@ -1,0 +1,115 @@
+.problem-tree-container {
+    width: 100%;
+    min-height: 80vh;
+    background-color: #141414; 
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.scroll-animate {
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.problem-tree-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #EAEAEA; 
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.problem-node {
+    border: 2px solid #444; 
+    padding: 10px 15px;
+    border-radius: 8px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
+    min-width: 180px; 
+    max-width: 250px; 
+    min-height: 150px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #F0F0F0; 
+}
+
+.problem-node.problem-central {
+    background-color: #1A237E;
+    border-color: #131c6a;
+    color: #F0F0F0;
+    font-weight: bold;
+}
+
+.problem-node.cause-level-1,
+.problem-node.effect-level-1 {
+    background-color: #D49A32; 
+    border-color: #a87a28;
+    color: #1A1A1A; 
+}
+
+.problem-node.cause-level-2,
+.problem-node.cause-level-3,
+.problem-node.effect-level-2 {
+    background-color: #004D40; 
+    border-color: #00332B;
+    color: #F0F0F0;
+}
+
+.react-flow__handle {
+    width: 12px;
+    height: 12px;
+    background: #FFB300; 
+    border: 2px solid #141414;
+}
+
+.react-flow__handle.react-flow__handle-top {
+    top: 98%; 
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.react-flow__handle.react-flow__handle-bottom {
+    bottom: 98%;
+    transform: translateX(-50%) translateY(50%);
+}
+
+.react-flow__handle-left,
+.react-flow__handle-right {
+    display: none; 
+}
+
+.react-flow__controls button {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.react-flow__node.selected {
+    border-color: #FFB300; 
+    box-shadow: 0 0 0 3px rgba(255, 179, 0, 0.7);
+}
+
+.react-flow__edge-path {
+    stroke: #A0A0A0 !important; 
+    stroke-width: 2 !important;
+}
+
+.react-flow__edge-marker-end {
+    fill: #A0A0A0 !important;
+}

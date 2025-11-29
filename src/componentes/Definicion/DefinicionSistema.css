@@ -1,0 +1,123 @@
+.sistema-container {
+    padding: 5rem 1.5rem;
+    color: #F0F0F0;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden; 
+    background-color: #141414;
+    background-image: radial-gradient(
+        circle, 
+        rgba(255, 255, 255, 0.04) 1.5px, 
+        transparent 1px, 
+        transparent 10px 
+    );
+    background-size: 30px 30px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8); 
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 1s ease-out, transform 1s ease-out; 
+}
+
+.fade-section.is-visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.title-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:  #FFB300;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+.definicion-content-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
+    justify-content: center; 
+    margin-bottom: 3rem; 
+    max-width: 1100px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-card {
+    flex: 1 1 calc(25% - 1.2rem); 
+    min-width: 250px; 
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #FFB300; 
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.card-text {
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    color: #EAEAEA;
+}
+
+.card-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+}
+
+.card-teal {
+    background-color: #004D40; 
+}
+
+.card-green {
+    background-color: #232024; 
+}
+
+.card-blue {
+    background-color: #1A237E; 
+}
+
+.card-yellow {
+    background-color: #3C4043; 
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .info-card {
+        flex: 1 1 calc(50% - 1rem); 
+    }
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        flex: 1 1 100%; 
+        min-width: 100%;
+    }
+    
+    .title-section {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,132 @@
+.integrantes-scroll-container {
+    width: 100%;
+    background-color: #141414; 
+    background-image: radial-gradient(
+        circle, 
+        rgba(255, 255, 255, 0.04) 1.5px, 
+        transparent 1px, 
+        transparent 10px 
+    );
+}
+
+.integrante-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.integrante-image-placeholder {
+    display: none; 
+}
+
+.integrante-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: left 0.8s ease-in-out, right 0.8s ease-in-out, width 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; 
+    opacity: 0.8;
+}
+
+.image-right .integrante-content {
+    left: 0;
+    width: 50%;
+}
+
+.image-right.active-once .integrante-content {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+}
+
+.image-left .integrante-content {
+    right: 0;
+    width: 50%;
+}
+
+.image-left.active-once .integrante-content {
+    right: 0;
+    width: 100%; 
+    opacity: 1;
+}
+
+.content-inner {
+    max-width: 700px; 
+    padding: 20px;
+    width: 100%;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.integrante-subtitle {
+    font-family: 'Georgia', serif; 
+    font-size: 1.2em;
+    color: #FFC72C; 
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.integrante-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.integrante-icon {
+    font-size: 3em; 
+    margin-right: 15px;
+    opacity: 0.8;
+}
+
+.integrante-title {
+    font-family: 'Playfair Display', serif; 
+    font-size: 3em;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.integrante-details h3 {
+    color: #ffffff; 
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #FFC72C; 
+    padding-bottom: 5px;
+}
+
+.integrante-details p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+.integrante-details ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.integrante-details ul li {
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.8;
+    color: #c0c0c0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.integrante-details ul li::before {
+    content: '→'; 
+    position: absolute;
+    left: 0;
+    color: #FFC72C; 
+    font-weight: bold;
+    font-size: 1em;
+}

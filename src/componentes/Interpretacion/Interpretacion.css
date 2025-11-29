@@ -1,0 +1,47 @@
+.interpretacion-caja-unica {
+    background-color: #141414;
+    background-image: radial-gradient(
+        circle, 
+        rgba(255, 255, 255, 0.04) 1.5px, 
+        transparent 1px, 
+        transparent 10px 
+    );
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    padding: 25px 5%;
+    border-left: 5px solid #FFC72C;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7); 
+    font-family: Arial, sans-serif;
+    border-radius: 0; 
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
+}
+
+.interpretacion-caja-unica.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.interpretacion-subtitulo-unica {
+    color:  #FFB300; 
+    font-size: 1.6em; 
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #FFC72C; 
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+
+.interpretacion-caja-unica p {
+    color: #c4c2c2; 
+    line-height: 1.65; 
+    margin-bottom: 18px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.interpretacion-caja-unica p strong {
+    color: #FFC72C; 
+}

@@ -1,0 +1,115 @@
+.ContenedorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  right: 5%;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, rgba(100, 100, 100, 0.8), rgba(60, 60, 60, 0.8)); /* Fondo degradado neutro con transparencia */
+  border-radius: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Borde blanco suave */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  backdrop-filter: blur(20px); /* Fondo desenfocado */
+  z-index: 1000;
+  box-sizing: border-box;
+  animation: fadeDown 1s ease forwards;
+  transition: all 0.3s ease;
+}
+
+/* Estilo cuando el header ha sido scrolleado */
+.ContenedorHeader.scrolled {
+  background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al hacer scroll */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Estilo del logo */
+.header-logo img {
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  padding-left: 20px;
+  height: clamp(45px, 5vw, 45px); /* Tamaño adaptado para diferentes dispositivos */
+}
+
+/* Estilo para la barra de navegación */
+.navegador {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7rem;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #FFC107; /* Color dorado al hacer hover */
+}
+
+/* Botón CTA (Call to Action) */
+.CTA-botton {
+  background-color: #E04000; /* Naranja */
+  color: white;
+  font-weight: bold;
+  padding: clamp(0.6rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+  border-radius: 8px;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.CTA-botton:hover {
+  background-color: #c43600; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1024px) {
+  .nav-link {
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .CTA-botton {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ContenedorHeader {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .navegador {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+    margin: 0.3rem;
+  }
+
+  .CTA-botton {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
