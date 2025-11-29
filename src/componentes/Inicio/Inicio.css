@@ -123,8 +123,8 @@
 @media (max-width: 768px) {
     .inicio {
         height: auto;
-        min-height: 85vh; 
-        padding-top: 80px;  
+        min-height: 100vh; 
+        padding-top: 110px;  
         padding-bottom: 50px;
     }
 
