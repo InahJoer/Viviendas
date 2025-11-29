@@ -7,8 +7,8 @@ export default function Footer() {
     return (
         <footer className="app-footer">
             <div className="footer-content">
-                <p>&copy; {currentYear}  Ingeniería en Sistemas - Sistema de Adquisición de Viviendas de Interés Social en Managua.</p>
-                <p className="footer-citation">Diseñado para la asignatura de Ingeniería en Sistemas - UNI.</p>
+                <p>&copy; {currentYear}  Ingeniería de Sistemas - Sistema de Adquisición de Viviendas de Interés Social en Managua.</p>
+                <p className="footer-citation">Diseñado para la asignatura de Ingeniería de Sistemas - UNI.</p>
             </div>
         </footer>
     );
