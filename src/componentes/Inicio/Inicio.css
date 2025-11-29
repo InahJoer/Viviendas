@@ -123,8 +123,8 @@
 @media (max-width: 768px) {
     .inicio {
         height: auto;
-        min-height: 80vh;
-        padding-top: 160px;
+        min-height: 85vh; 
+        padding-top: 80px;  
         padding-bottom: 50px;
     }
 
@@ -150,16 +150,18 @@
     }
 
     .botones-inicio {
-        flex-direction: column;
-        gap: 0.8rem;
+        flex-direction: row; 
+        justify-content: center;
+        gap: 0.5rem; 
         margin-top: 1.5rem;
     }
     
     .botones-inicio .btn-primario,
     .botones-inicio .btn-secundario {
-        width: 80%;
-        max-width: 300px;
-        margin: 0 auto;
-        padding: 0.7rem 1.5rem;
+        width: auto; /* Dejamos que el contenido y el padding definan el ancho */
+        max-width: 45%; /* Cada botón no ocupa más del 45% del ancho */
+        margin: 0; 
+        padding: 0.7rem 1rem; /* Reducimos el padding para que quepan */
+        font-size: 0.9rem; /* Fuente más pequeña para que quepa */
     }
 }

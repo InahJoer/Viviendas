@@ -94,32 +94,28 @@
 }
 
 @media (max-width: 768px) {
-.ContenedorHeader {
+    .ContenedorHeader {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         width: 100%;
         border-radius: 0;
-        flex-direction: column;
+        flex-direction: row; /* Vuelve a usar fila para una sola línea */
         align-items: center;
-        padding: 0.5rem 1rem;
-        gap: 0.5rem;
+        justify-content: center; /* Centra el menú que es lo único que queda */
+        padding: 0.8rem 1rem; /* Más padding para que la barra se vea bien */
+        gap: 0; /* No necesitamos gap entre elementos si solo queda uno */
         box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
     }
     
-.header-logo {
-        width: 100%;
-        text-align: center;
+    /* AJUSTE CLAVE 1: Ocultar Logo y Botón */
+    .header-logo,
+    .CTA-botton {
+        display: none !important; 
     }
 
-    .header-logo img {
-        height: 28px;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-
-    /* NAVEGADOR (Menú de enlaces) */
+    /* NAVEGADOR: Único elemento visible */
     .navegador {
         width: 100%;
         flex-wrap: wrap;
@@ -130,21 +126,12 @@
     }
 
     .nav-link {
-        font-size: 0.8rem;
-        margin: 0;
+        font-size: 0.8rem; /* Fuente de menú legible */
         padding: 0 5px;
         white-space: normal;
         line-height: 1.2;
     }
 
-    /* BOTÓN CTA */
-    .CTA-botton {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-        min-height: 40px;
-        margin-top: 5px;
-        white-space: nowrap;
-    }
 
     /* TRILOGÍA: Desactivar Sticky y Columnas */
     .trilogia-sticky-wrapper {
