@@ -3,6 +3,24 @@ import './Inicio.css';
 import { Link } from 'react-router-dom';
 
 const Inicio = () => {
+
+      const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/DocOficial.pdf'; 
+        link.download = 'Proyecto.pdf'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+          const Download = () => {
+        const link = document.createElement('a');
+        link.href = '/objetivos.pdf'; 
+        link.download = 'ObjetivosProyecto.pdf'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
   return (
     <section className="inicio">
       <div 
@@ -16,10 +34,10 @@ const Inicio = () => {
           </p>
 
         <div className="botones-inicio">
-          <Link to="/solicitar" className="btn-primario">Objetivos del Proyecto</Link>
+          <Link className="btn-primario" onClick={Download} >Objetivos del Proyecto</Link>
           <button
             className="btn-secundario"
-            onClick={() => document.getElementById('propuesta-seccion').scrollIntoView({ behavior: 'smooth' })}
+            onClick={handleDownload}
           >
             Ver Propuesta
           </button>

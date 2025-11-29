@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import './BarraDeNavegacion.css';
 import { Link } from 'react-router-dom';
-import Logo from '../../Imagenes/Logo.png'; 
+import Logo from '../../Imagenes/Logo.png';
 
 export const BarraDeNavegacion = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50); 
+            setIsScrolled(window.scrollY > 50);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/objetivos.pdf'; 
+        link.download = 'Objetivos_del_Proyecto.pdf'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     return (
         <header className={`ContenedorHeader ${isScrolled ? 'scrolled' : ''}`}>
@@ -41,8 +50,9 @@ export const BarraDeNavegacion = () => {
             </nav>
 
             <div>
-                {/* Botón CTA -> ANCLA #solicitar */}
-                <Link to="/#solicitar" className="CTA-botton">Objetivos del Proyecto</Link>
+                <button className="CTA-botton" onClick={handleDownload}>
+                    Objetivos del Proyecto
+                </button>
             </div>
         </header>
     );
