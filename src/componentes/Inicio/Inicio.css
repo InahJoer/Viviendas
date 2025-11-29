@@ -119,3 +119,47 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+    .inicio {
+        height: auto;
+        min-height: 80vh;
+        padding-top: 130px;
+        padding-bottom: 50px;
+    }
+
+    .slider-item {
+        height: 100%;
+        position: absolute;
+    }
+
+    .inicio .contenido-inicio {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .contenido-inicio h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 0.8rem;
+    }
+
+    .contenido-inicio p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .botones-inicio {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .botones-inicio .btn-primario,
+    .botones-inicio .btn-secundario {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 0.7rem 1.5rem;
+    }
+}
